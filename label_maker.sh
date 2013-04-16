@@ -8,19 +8,16 @@ OWNER="$SKULLSPACE_STR"
 QR_CODE_PNG="qrcode.png"
 OUTFILE="label.png"
 
-set -- $(getopt hto: "$@")
-while [ $# -gt 0 ]
-do
-    case "$1" in
-    (-h) HACKABLE=true;;
-    (-t) NEED_TRAINING=false;;
-    (-o) OWNER="$2"; shift;;
-    (--) shift; break;;
-    (-*) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
-    (*)  break;;
+while getopts "hto:" arg; do
+    case "$arg" in
+    h) HACKABLE=true;;
+    t) NEED_TRAINING=false;;
+    o) OWNER="$OPTARG";;
+    -) break;;
+    *) echo "$0: error - unrecognized option $1" 1>&2; exit 1;;
     esac
-    shift
 done
+shift $(( OPTIND-1 ))
 
 TOOL_NAME=$1
 URL="skullspace.ca/wiki/index.php/$TOOL_NAME"
