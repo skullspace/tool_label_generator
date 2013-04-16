@@ -1,5 +1,8 @@
 SkullSpace tool label generator
 ===============================
+
+![Default label][label]
+
 This is a script to generate tool labels. For the most basic label
 
 ```
@@ -25,3 +28,5 @@ If people are allowed to hack the tool, add -h.
 ```
 ./label_maker.sh -h 3d_printer
 ```
+
+[label]: https://raw.github.com/skullspace/tool_label_generator/master/label.png
