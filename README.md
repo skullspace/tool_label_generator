@@ -9,7 +9,7 @@ This is a script to generate tool labels. For the most basic label
 ./label_maker.sh 3d_printer
 ```
 
-This will generate a default label linking to skullspace.ca/wiki/index.php/3d_printer, setting SkullSpace as the owner, requiring training, and disallowing hacking.
+This will generate a default label linking to wiki.skullspace.ca/index.php/3d_printer, setting SkullSpace as the owner, requiring training, and disallowing hacking.
 
 If the tool is not owned by SkullSpace, you can specify the owner with the -o flag.
 
