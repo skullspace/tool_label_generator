@@ -20,7 +20,7 @@ done
 shift $(( OPTIND-1 ))
 
 TOOL_NAME=$1
-URL="skullspace.ca/wiki/index.php/$TOOL_NAME"
+URL="wiki.skullspace.ca/index.php/$TOOL_NAME"
 
 if [[ "$OWNER" = "$SKULLSPACE_STR" ]]; then
    owner_icon="Skullspace_logo_square_white.svg"
